@@ -934,9 +934,16 @@ header {
 }
 
 .form-input:focus {
-  outline: none;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
   border-color: var(--primary);
   box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
+}
+
+@media (forced-colors: active) {
+  .form-input:focus {
+    outline: 2px solid Highlight;
+  }
 }
 
 /* Form Success Card Style */

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
-  const navContainer = document.querySelector('.nav-links');
+  const navContainer = document.getElementById('nav-menu');
   
   if (!menuToggle || !navContainer) return;
 
@@ -79,7 +79,7 @@ function initScrollspy() {
           const href = link.getAttribute('href');
           if (href === `#${id}`) {
             link.classList.add('nav-link--active');
-            link.setAttribute('aria-current', 'page');
+            link.setAttribute('aria-current', 'location');
           } else {
             link.classList.remove('nav-link--active');
             link.removeAttribute('aria-current');
@@ -103,47 +103,88 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     
-    // Simple visual sending state
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     if (liveRegion) liveRegion.textContent = 'Submitting form. Please wait...';
 
-    // Mock API delay
-    setTimeout(() => {
-      // Re-enable and reset form
+    // Collect data parameters
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    const endpoint = form.getAttribute('action') && form.getAttribute('action') !== '#'
+      ? form.getAttribute('action')
+      : 'https://formspree.io/f/mnqeogww';
+
+    fetch(endpoint, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Re-enable and reset form parent layout
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        
+        const formCardParent = form.parentElement;
+        
+        // Beautiful accessibility-focused success markup (no inline onclick)
+        const successMarkup = `
+          <div class="success-card" id="success-message-card" tabindex="-1">
+            <div class="success-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Inquiry Received Successfully</h3>
+            <p>Thank you for contacting Kamineni Solutions. Our founding team will review your project details and get back to you shortly at the email address provided.</p>
+            <button class="btn btn-secondary btn-reload" style="margin-top: 1rem; width: 100%;">Send Another Inquiry</button>
+          </div>
+        `;
+
+        formCardParent.innerHTML = successMarkup;
+        
+        const successCard = document.getElementById('success-message-card');
+        if (successCard) successCard.focus();
+
+        const reloadBtn = formCardParent.querySelector('.btn-reload');
+        if (reloadBtn) {
+          reloadBtn.addEventListener('click', () => {
+            window.location.reload();
+          });
+        }
+        
+        if (liveRegion) {
+          liveRegion.textContent = 'Your message has been sent successfully. We will contact you soon.';
+        }
+      } else {
+        throw new Error('Form backend error response');
+      }
+    })
+    .catch(err => {
+      console.error('Submission failed:', err);
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
-      
-      // Hide the form visual state and replace with a success layout card
-      const formCardParent = form.parentElement;
-      
-      // Beautiful accessibility-focused success markup
-      const successMarkup = `
-        <div class="success-card" id="success-message-card" tabindex="-1">
-          <div class="success-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-          </div>
-          <h3>Inquiry Received Successfully</h3>
-          <p>Thank you for contacting Kamineni Solutions. Our founding team will review your project details and get back to you shortly at the email address provided.</p>
-          <button class="btn btn-secondary" onclick="window.location.reload();" style="margin-top: 1rem; width: 100%;">Send Another Inquiry</button>
-        </div>
-      `;
-
-      formCardParent.innerHTML = successMarkup;
-      
-      const successCard = document.getElementById('success-message-card');
-      if (successCard) successCard.focus();
-      
       if (liveRegion) {
-        liveRegion.textContent = 'Your message has been sent successfully. We will contact you soon.';
+        liveRegion.textContent = 'Failed to send message. Please try again or contact founders@kamineni-ai.com directly.';
       }
-    }, 1200);
+      alert('There was a problem submitting your inquiry. Please try again or contact founders@kamineni-ai.com directly.');
+    });
   });
 }
