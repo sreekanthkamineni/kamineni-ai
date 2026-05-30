@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kamineni Solutions Inc. specializes in automated cloud-native AI video generation pipelines using Wan 2.2, ComfyUI, and PostgreSQL, optimized for safe children's media content.">
+  <meta name="keywords" content="AI Video Generation, ComfyUI API, Wan 2.2 model, Kid-safe AI pipelines, PostgreSQL rendering queues">
+  <meta name="author" content="Kamineni Solutions Inc.">
+  
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:title" content="Kamineni Solutions Inc. | Enterprise AI Video Generation Pipelines">
+  <meta property="og:description" content="Scalable, compliant AI rendering pipelines leveraging Wan 2.2 and ComfyUI. Built from the ground up for children's digital content.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kamineni-ai.com">
+  
+  <title>Kamineni Solutions Inc. | Enterprise AI Video Generation Pipelines</title>
+  
+  <!-- Favicon placeholder (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%236366f1' d='M16 2L3 9l13 7 13-7-13-7z'/%3E%3Cpath fill='%2306b6d4' d='M3 23l13 7 13-7V11L16 18 3 11v12z'/%3E%3C/svg%3E">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo" id="nav-logo-link">
+        <!-- SVG Logo: Video frame intersecting with network nodes -->
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="28" height="28" rx="6" stroke="url(#logo-grad)" stroke-width="2.5" />
+          <circle cx="16" cy="16" r="5" fill="url(#logo-grad)" />
+          <circle cx="9" cy="9" r="2.5" fill="#f8fafc" />
+          <circle cx="23" cy="23" r="2.5" fill="#f8fafc" />
+          <circle cx="23" cy="9" r="2.5" fill="#06b6d4" />
+          <circle cx="9" cy="23" r="2.5" fill="#a855f7" />
+          <line x1="9" y1="9" x2="16" y2="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="23" y1="23" x2="16" y2="16" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1" />
+              <stop offset="1" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Kamineni Solutions</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#hero" id="nav-home">Home</a></li>
+        <li><a href="#architecture" id="nav-arch">Architecture</a></li>
+        <li><a href="#technology" id="nav-tech">Technology</a></li>
+        <li><a href="#safety" id="nav-safety">Safety & Verification</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
+      </ul>
+      
+      <div>
+        <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="nav-cta">Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section container" id="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Wan 2.2 Video Orchestration v2.0</span>
+        </div>
+        <h1 class="text-gradient-primary">Automated AI Video Pipelines Built for Children's Content</h1>
+        <p>Kamineni Solutions Inc. engineers enterprise-grade rendering workflows. We combine ComfyUI server clusters, stateful PostgreSQL queues, and state-of-the-art Wan 2.2 diffusion models to generate high-fidelity, kid-safe media assets at scale.</p>
+        
+        <div class="hero-buttons">
+          <a href="#architecture" class="btn btn-primary" id="btn-hero-explore">
+            Explore Architecture
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">Get in Touch</a>
+        </div>
+      </div>
+      
+      <div class="hero-right">
+        <!-- Dashboard UI Mockup to showcase AI generation process -->
+        <div class="ui-mockup">
+          <div class="ui-header">
+            <div class="ui-dots">
+              <span class="ui-dot"></span>
+              <span class="ui-dot"></span>
+              <span class="ui-dot"></span>
+            </div>
+            <div class="ui-title">KAMINENI-PIPELINE // LIVE MONITOR</div>
+            <span class="ui-status">Cluster Active</span>
+          </div>
+          
+          <div class="ui-body">
+            <!-- Row 1: PostgreSQL Queue -->
+            <div class="ui-row">
+              <div class="ui-row-left">
+                <div class="ui-icon-placeholder">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+                </div>
+                <div class="ui-meta">
+                  <span class="ui-label">PostgreSQL Task Queue</span>
+                  <span class="ui-sublabel">Partitioning active (ID: 04a29)</span>
+                </div>
+              </div>
+              <span class="ui-badge active">98.4% Load</span>
+            </div>
+            
+            <!-- Row 2: Wan 2.2 Model -->
+            <div class="ui-row">
+              <div class="ui-row-left">
+                <div class="ui-icon-placeholder" style="color: var(--secondary); background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div class="ui-meta">
+                  <span class="ui-label">Wan 2.2 Text-to-Video</span>
+                  <span class="ui-sublabel">Generating frame sequence...</span>
+                </div>
+              </div>
+              <span class="ui-badge running">Rendering</span>
+            </div>
+            
+            <!-- Row 3: ComfyUI Backend -->
+            <div class="ui-row">
+              <div class="ui-row-left">
+                <div class="ui-icon-placeholder" style="color: var(--accent); background: rgba(168,85,247,0.1); border-color: rgba(168,85,247,0.2);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="ui-meta">
+                  <span class="ui-label">ComfyUI Upscale Node</span>
+                  <span class="ui-sublabel">Resolution target: 2048x1152</span>
+                </div>
+              </div>
+              <span class="ui-badge active">Awaiting VRAM</span>
+            </div>
+            
+            <!-- Row 4: Kid-Safe filter -->
+            <div class="ui-row" style="border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.02);">
+              <div class="ui-row-left">
+                <div class="ui-icon-placeholder" style="color: #10b981; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="ui-meta">
+                  <span class="ui-label">Toxicity Filter & Moderation</span>
+                  <span class="ui-sublabel">Children Content Safeguard Scan</span>
+                </div>
+              </div>
+              <span class="ui-badge" style="background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3);">100% Passed</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="section" id="architecture" style="background: #07070b; border-y: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="text-gradient-primary">Visual Rendering Architecture</h2>
+        <p>Our distributed rendering backend translates raw story concepts into fully realized video animations using isolated pipeline steps.</p>
+      </div>
+      
+      <div class="workflow-grid">
+        <!-- Stage 1 -->
+        <div class="workflow-card">
+          <div class="workflow-num">01</div>
+          <h3>Story Ingestion</h3>
+          <p>Text prompts and audio narrations are parsed into technical asset descriptors.</p>
+        </div>
+        <!-- Stage 2 -->
+        <div class="workflow-card">
+          <div class="workflow-num">02</div>
+          <h3>Task Scheduling</h3>
+          <p>PostgreSQL queue assigns generation tasks to available GPU servers.</p>
+        </div>
+        <!-- Stage 3 -->
+        <div class="workflow-card">
+          <div class="workflow-num">03</div>
+          <h3>Model Diffusion</h3>
+          <p>Wan 2.2 models generate continuous video frames at high speed.</p>
+        </div>
+        <!-- Stage 4 -->
+        <div class="workflow-card">
+          <div class="workflow-num">04</div>
+          <h3>Safe Filter</h3>
+          <p>Safety models ensure content aligns with strict children's guidelines.</p>
+        </div>
+        <!-- Stage 5 -->
+        <div class="workflow-card">
+          <div class="workflow-num">05</div>
+          <h3>Stitching & CDN</h3>
+          <p>Frames, audio overlays, and metadata compile for API delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section -->
+  <section class="section container" id="technology">
+    <div class="section-header">
+      <h2 class="text-gradient-primary">Core Technical Infrastructure</h2>
+      <p>We leverage open-source AI advancements and highly reliable database engines to run pipelines at scale with 99.9% uptime.</p>
+    </div>
+    
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </div>
+        <h3>Wan 2.2 Diffusion</h3>
+        <p>Harnessing local instances of the advanced Wan 2.2 model family, we achieve hyper-fluid animal movements, colorful backgrounds, and character expression consistency optimized for youth media.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        </div>
+        <h3>ComfyUI API Clusters</h3>
+        <p>Using programmatic ComfyUI execution graphs, our engine performs complex multi-stage upscale, detail injection, and color grade steps without manual node assembly.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        </div>
+        <h3>PostgreSQL Scheduler</h3>
+        <p>Custom-built scheduler utilizes PostgreSQL's state management to coordinate multiple GPU compute node queues, guaranteeing transactional reliability and zero job loss.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety & Hub Compliance Section -->
+  <section class="section" id="safety" style="background: linear-gradient(180deg, #0a0b10 0%, #06070a 100%); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="safety-layout">
+        <div>
+          <div class="badge" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: #34d399;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Safety First Compliance</span>
+          </div>
+          <h2 class="text-gradient-primary">Built for Global Safety & Hub Compliance</h2>
+          <p style="margin-bottom: 1.5rem;">For children's media, safety cannot be an afterthought. Our pipelines enforce automated filters that cross-check generative inputs and outputs before delivery, satisfying rigorous program verification criteria.</p>
+          <p style="margin-bottom: 2rem; color: var(--text-muted);">This architecture is optimized for cloud infrastructure programs such as **Microsoft Founders Hub**, **FedDev Ontario**, and **AWS Activate**—combining AI capability with high accountability.</p>
+          
+          <div style="display: flex; gap: 3rem;">
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 700; color: var(--primary);">COPPA</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Compliant Inputs</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 700; color: var(--secondary);">0%</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Offensive Content Leak</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 700; color: var(--accent);">24/7</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Queue Watchdog</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="safety-visual">
+          <div class="safety-stat-box">
+            <div class="safety-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="safety-stat-details">
+              <h4>Safety Guardrail Engine</h4>
+              <p>Filters generative workflows for extreme safety and child appropriateness.</p>
+            </div>
+          </div>
+          
+          <div class="safety-stat-box">
+            <div class="safety-stat-icon" style="background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.2); color: var(--primary);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <div class="safety-stat-details">
+              <h4>Stateful Cluster Queues</h4>
+              <p>Ensures that node workloads compile correctly and recover on network failure.</p>
+            </div>
+          </div>
+          
+          <div class="safety-stat-box">
+            <div class="safety-stat-icon" style="background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2); color: var(--secondary);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+            </div>
+            <div class="safety-stat-details">
+              <h4>Microsoft & AWS Ready</h4>
+              <p>Designed around standard cloud safety policies and scalability limits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Legal verification section -->
+  <section class="section container" id="contact">
+    <div class="contact-card">
+      <div class="contact-left">
+        <h2>Partner with Kamineni</h2>
+        <p>Interested in applying our automated AI video generation pipelines to your children's platform or education system? Contact our founding team to discuss technical integrations.</p>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <a href="mailto:founders@kamineni-ai.com" id="email-founders">founders@kamineni-ai.com</a>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon" style="color: var(--secondary); background: rgba(6,182,212,0.1); border-color: rgba(6,182,212,0.2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <span style="color: var(--text-secondary); font-weight: 500;">Ontario, Canada</span>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Corporate Email</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-input" style="min-height: 100px; resize: vertical;" placeholder="Tell us about your AI video pipeline needs" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit-message" style="margin-top: 0.5rem; width: 100%;">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <span class="footer-copy">&copy; 2026 Kamineni Solutions Inc. All rights reserved.</span>
+      
+      <ul class="footer-links">
+        <li><a href="#" id="footer-privacy">Privacy Policy</a></li>
+        <li><a href="#" id="footer-terms">Terms of Service</a></li>
+        <li><a href="mailto:founders@kamineni-ai.com" id="footer-email">founders@kamineni-ai.com</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
